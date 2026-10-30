@@ -47,6 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Attach delete button event listeners
       document.querySelectorAll(".delete-btn").forEach(btn => {
+        btn.setAttribute("aria-label", `Unregister ${btn.dataset.email} from ${btn.dataset.activity}`);
         btn.addEventListener("click", handleDelete);
       });
     } catch (error) {
