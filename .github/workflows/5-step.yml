@@ -54,7 +54,7 @@ jobs:
           file: ${{ env.REVIEW_FILE }}
 
       - name: Disable current workflow
-        run: gh workflow disable "${{github.workflow}}"
+        run: gh workflow disable 5-step.yml
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
